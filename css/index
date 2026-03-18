@@ -1,155 +1,567 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Severon Systems helps industrial operators stabilize output, recover accountability, and restore execution discipline across plants, sites, and operating teams.">
-  <title>Severon Systems</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+/* =========================================
+   CSS VARIABLES & GLOBAL SETTINGS
+   ========================================= */
+:root {
+    --bg:              #FFFFFF;
+    --bg-alt:          #F4F5F7;
+    --navy:            #0F2340;
+    --navy-mid:        #1B3A6B;
+    --charcoal:        #2C2C2C;
+    --text-primary:    #1A1A1A;
+    --text-secondary:  #555C6B;
+    --text-dim:        #9099A8;
+    --border:          #D8DCE4;
+    --border-strong:   #B0B8C8;
+    --cta:             #1B3A6B;
+    --cta-hover:       #0F2340;
+    --accent-rule:     #C8A84B;
+    --font-display:    'Syne', sans-serif;
+    --font-body:       'DM Sans', sans-serif;
+    --font-mono:       'IBM Plex Mono', monospace;
+    --nav-h:           72px;
+}
 
-  <!-- NAV -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <div class="nav__inner">
-      <a class="nav__logo" href="#hero">SEVERON</a>
-      <ul class="nav__links" role="list">
-        <li><a href="#focus">Operating Focus</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#approach">Approach</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a class="nav__cta" href="mailto:info@severonsystems.com">Book a Review</a>
-      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="nav__mobile-overlay" aria-hidden="true">
-      <ul role="list">
-        <li><a href="#focus">Operating Focus</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#approach">Approach</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="mailto:info@severonsystems.com" class="mobile-cta">Book a Review</a></li>
-      </ul>
-    </div>
-  </nav>
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero__grid-bg" aria-hidden="true"></div>
-    <div class="container">
-      <div class="hero__rule" aria-hidden="true"></div>
-      <h1 class="hero__headline">Fix operational drag<br>before it becomes<br>a capital problem.</h1>
-      <p class="hero__sub">Severon Systems helps industrial operators stabilize output, recover accountability, and restore execution discipline across plants, sites, and operating teams.</p>
-      <a class="cta-btn" href="mailto:info@severonsystems.com">Book an operating review</a>
-    </div>
-  </section>
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
 
-  <!-- OPERATING FOCUS -->
-  <section class="section" id="focus">
-    <div class="container">
-      <p class="section__label">Operating Focus</p>
-      <div class="grid-3 reveal-group">
-        <div class="card reveal-item">
-          <h3>Throughput Recovery</h3>
-          <p>Bottleneck identification, labor reallocation, line discipline, schedule execution.</p>
-        </div>
-        <div class="card reveal-item">
-          <h3>Plant Stabilization</h3>
-          <p>Daily management reset, KPI integrity, accountability cadence, leadership structure.</p>
-        </div>
-        <div class="card reveal-item">
-          <h3>Multi-Site Performance</h3>
-          <p>Standard work, variance control, reporting hygiene, execution visibility.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+body {
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    background-color: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-  <!-- SERVICES -->
-  <section class="section section--surface" id="services">
-    <div class="container">
-      <p class="section__label">Services</p>
-      <div class="grid-2 reveal-group">
-        <div class="card reveal-item">
-          <span class="card__num">01</span>
-          <h3>Operational Diagnostic</h3>
-          <p>Rapid assessment of output loss, reporting failure, leadership gaps, and execution friction.</p>
-        </div>
-        <div class="card reveal-item">
-          <span class="card__num">02</span>
-          <h3>90-Day Stabilization Plan</h3>
-          <p>Clear intervention sequence for plant rhythm, labor deployment, meetings, metrics, and ownership.</p>
-        </div>
-        <div class="card reveal-item">
-          <span class="card__num">03</span>
-          <h3>Leadership Operating Cadence</h3>
-          <p>Daily, weekly, and monthly management system redesign to restore accountability.</p>
-        </div>
-        <div class="card reveal-item">
-          <span class="card__num">04</span>
-          <h3>Site and Network Support</h3>
-          <p>Targeted support for underperforming plants, regional portfolios, and post-change recovery.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+/* =========================================
+   TYPOGRAPHY
+   ========================================= */
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--navy);
+}
 
-  <!-- APPROACH -->
-  <section class="section" id="approach">
-    <div class="container">
-      <p class="section__label">Approach</p>
-      <div class="approach reveal-group">
-        <div class="approach__step reveal-item">
-          <span class="approach__num" aria-hidden="true">01</span>
-          <div class="approach__content">
-            <h3>Diagnose</h3>
-            <p>Identify true constraint.</p>
-          </div>
-        </div>
-        <div class="approach__connector" aria-hidden="true"></div>
-        <div class="approach__step reveal-item">
-          <span class="approach__num" aria-hidden="true">02</span>
-          <div class="approach__content">
-            <h3>Stabilize</h3>
-            <p>Install execution control.</p>
-          </div>
-        </div>
-        <div class="approach__connector" aria-hidden="true"></div>
-        <div class="approach__step reveal-item">
-          <span class="approach__num" aria-hidden="true">03</span>
-          <div class="approach__content">
-            <h3>Institutionalize</h3>
-            <p>Make it durable.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+p {
+    color: var(--text-secondary);
+}
 
-  <!-- CONTACT -->
-  <section class="section section--surface" id="contact">
-    <div class="container">
-      <p class="section__label">Contact</p>
-      <div class="contact reveal-item">
-        <a class="contact__email" href="mailto:info@severonsystems.com">info@severonsystems.com</a>
-        <p class="contact__sub">Operating engagements begin with a diagnostic call. No retainer required to start.</p>
-        <a class="cta-btn" href="mailto:info@severonsystems.com">Book an operating review</a>
-      </div>
-    </div>
-  </section>
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2026 Severon Systems. All rights reserved.</p>
-    </div>
-  </footer>
+.section-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+}
 
-  <script src="js/main.js"></script>
-</body>
-</html>
+/* =========================================
+   LAYOUT UTILITIES
+   ========================================= */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section-padding { padding: 96px 0; }
+.bg-alt { background-color: var(--bg-alt); }
+.bg-navy { background-color: var(--navy); }
+.text-white, .text-white h2, .text-white h3 { color: #FFFFFF; }
+.text-white p { color: rgba(255, 255, 255, 0.75); }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+.mt-4 { margin-top: 4rem; }
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--cta);
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 12px 24px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: var(--cta-hover);
+    box-shadow: inset 3px 0 0 0 var(--navy-mid);
+}
+.btn-large {
+    padding: 16px 32px;
+    font-size: 16px;
+}
+.btn-white {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: var(--navy);
+    font-weight: 500;
+    padding: 14px 28px;
+    transition: all 0.3s ease;
+}
+.btn-white:hover {
+    background-color: var(--bg-alt);
+    box-shadow: inset 3px 0 0 0 var(--navy-mid);
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-h);
+    z-index: 100;
+    background-color: transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+#navbar.scrolled {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 12px rgba(0,0,0,0.07);
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.logo-link { display: flex; align-items: center; }
+.nav-links {
+    display: flex;
+    gap: 32px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.nav-links a:hover { color: var(--navy); }
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 102;
+}
+.hamburger .bar {
+    width: 24px;
+    height: 2px;
+    background-color: var(--navy);
+    transition: all 0.3s ease;
+}
+
+/* Mobile Nav Overlay */
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+.mobile-nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.mobile-nav-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+#hero {
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--bg);
+    overflow: hidden;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+.accent-rule {
+    width: 48px;
+    height: 2px;
+    background-color: var(--accent-rule);
+    margin-bottom: 2rem;
+}
+#hero h1 {
+    font-weight: 800;
+    font-size: clamp(40px, 6vw, 76px);
+    margin-bottom: 1.5rem;
+}
+.hero-subhead {
+    font-size: 17px;
+    max-width: 540px;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+.hero-cta-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+.hero-note {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-dim);
+}
+.hero-bg-s {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 40vw;
+    color: rgba(15, 35, 64, 0.04);
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* =========================================
+   GRIDS & CARDS
+   ========================================= */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--border);
+    padding: 36px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    background-color: var(--bg-alt);
+    box-shadow: inset 3px 0 0 0 var(--navy-mid);
+}
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+.card p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+.card-number {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 24px;
+}
+
+/* =========================================
+   APPROACH SECTION
+   ========================================= */
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    position: relative;
+}
+.approach-card {
+    position: relative;
+    padding: 36px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+.approach-card::before {
+    content: attr(data-step);
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.08);
+    z-index: -1;
+    line-height: 1;
+}
+.approach-card:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    box-shadow: inset 3px 0 0 0 #FFFFFF;
+    transform: translateY(-4px);
+}
+.approach-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+.approach-card p {
+    font-size: 15px;
+}
+
+/* Desktop Arrows */
+@media (min-width: 900px) {
+    .approach-card:not(:last-child)::after {
+        content: '→';
+        position: absolute;
+        right: -24px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 64px;
+    align-items: stretch;
+}
+.about-content h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+.about-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.stats-group {
+    display: flex;
+    gap: 48px;
+}
+.stat-number {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--navy);
+    line-height: 1.2;
+}
+.stat-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+.about-photo-block {
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+.photo-placeholder {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-dim);
+}
+
+/* =========================================
+   CONTACT SECTION
+   ========================================= */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+.contact-left h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+.contact-left p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.65);
+    max-width: 440px;
+}
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.contact-email {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+.contact-email:hover {
+    color: rgba(255,255,255,0.8);
+}
+.contact-location {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer-padding {
+    padding: 64px 0 48px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 48px;
+    align-items: end;
+}
+.footer-links {
+    display: flex;
+    gap: 64px;
+    justify-content: center;
+}
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.footer-col a {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+}
+.footer-col a:hover {
+    color: #FFFFFF;
+}
+.footer-legal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.35);
+    text-align: right;
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+@keyframes slideIn {
+    from { transform: scaleX(0); transform-origin: left; }
+    to   { transform: scaleX(1); transform-origin: left; }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero Stagger */
+.hero-anim-1 { animation: slideIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.1s both; }
+.hero-anim-2 { animation: fadeUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s both; }
+.hero-anim-3 { animation: fadeUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.5s both; }
+.hero-anim-4 { animation: fadeUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.7s both; }
+
+/* Scroll Fade Up Classes */
+.fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger Utilities for Cards */
+.stagger-1 { transition-delay: 0.08s; }
+.stagger-2 { transition-delay: 0.16s; }
+.stagger-3 { transition-delay: 0.24s; }
+.stagger-4 { transition-delay: 0.32s; }
+
+/* =========================================
+   MEDIA QUERIES
+   ========================================= */
+@media (max-width: 899px) {
+    .desktop-only { display: none !important; }
+    .hamburger { display: flex; }
+    
+    .grid-3, .grid-2, .approach-grid, .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-grid { gap: 32px; }
+    .about-photo-block { min-height: 300px; }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+        gap: 32px;
+    }
+    .footer-links {
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .footer-legal {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+@media (max-width: 599px) {
+    .section-padding { padding: 64px 0; }
+    
+    #hero h1 {
+        font-size: 40px;
+    }
+    
+    .stats-group {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
