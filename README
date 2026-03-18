@@ -1,33 +1,21 @@
-# Severon Systems
+# Severon Systems Website
 
-Static marketing site for Severon Systems — industrial operations consulting.
+This repository contains the static website for Severon Systems, an industrial operations consulting firm. It is a fully responsive, semantic HTML/CSS/JS build with zero external dependencies (aside from Google Fonts), designed for performance, clarity, and institutional credibility.
 
-**Stack**: Pure HTML / CSS / JS. No build step. No dependencies beyond Google Fonts CDN.
-
----
+## Tech Stack
+- **HTML5**: Semantic markup, accessible attributes.
+- **CSS3**: CSS Variables, CSS Grid/Flexbox, native keyframe & transition animations.
+- **JavaScript (Vanilla)**: Scroll handlers, IntersectionObserver for reveal animations, and mobile menu toggling.
 
 ## Local Preview
+Because this site uses zero build tools or package managers, previewing it is instantaneous:
+1. Clone or download this repository.
+2. Open the directory on your local machine.
+3. Double-click `index.html` to open it directly in any modern web browser.
 
-```bash
-# Option 1 — open directly
-open index.html
+## Deployment to GitHub Pages
+This site is structured specifically to be drop-in ready for GitHub Pages.
 
-# Option 2 — local server (avoids any CORS edge cases)
-npx serve .
-# or
-python3 -m http.server 8080
-```
-
----
-
-## Deploy to GitHub Pages
-
-1. Push this repo to GitHub
-2. Go to **Settings → Pages**
-3. Set source to `main` branch, `/ (root)`
-4. Site publishes at `https://<your-username>.github.io/<repo-name>/`
-
----
-
-## Contact
-info@severonsystems.com
+1. **Push to GitHub**: Upload these files to a new GitHub repository.
+2. **Enable Pages**: In your repository, navigate to **Settings > Pages**.
+3. **Deploy**: Under "Build and deployment", select **Deploy from a branch**, choose the `main` branch (and `/root` folder), and click **Save**. Your site will be live within a few minutes.
