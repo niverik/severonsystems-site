@@ -1,0 +1,92 @@
+:root {
+  --bg: #0D1117;
+  --surface: #111823;
+  --border: #1E2D45;
+  --accent: #1B2A4A;
+  --accent-bright: #2E5EBF;
+  --text-primary: #E8EAF0;
+  --text-secondary: #7A8499;
+  --text-dim: #444D5E;
+  --cta: #2E5EBF;
+  --cta-hover: #3B72D9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-family: 'Syne', sans-serif;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.hero {
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 48px;
+}
+
+.hero p {
+  margin-top: 20px;
+  color: var(--text-secondary);
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 20px;
+  background: var(--cta);
+  color: white;
+  text-decoration: none;
+}
+
+.section {
+  padding: 80px 20px;
+  border-top: 1px solid var(--border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.footer {
+  padding: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--text-dim);
+}
+
+.mono {
+  color: var(--text-secondary);
+}
